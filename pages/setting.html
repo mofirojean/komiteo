@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="../images/logo.png" alt="komiteo-logo">
+            </a>
+            <ul class="nav-items">
+                <li class="nav-item">
+                    <a href="../index.html">Tableau de bord</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./management.html">Gestion des comptes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./website.html">Site Internet</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="./setting.html">Paramètres</a>
+                </li>
+            </ul>
+            <button class="register-btn">Rechercher</button>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container content">
+        <section class="dashboard">
+            <div class="dash-cards">
+                <!-- cards -->
+                <div class="row">
+                    <fieldset class="setting">
+                        <legend>Administrateur (Secrétaire) et Adjoint</legend>
+                        <div class="fieldset-container set">
+                            <div class="form-checks">
+                                <label for="name">Configuration du compte</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Rôle</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">création de compte</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Tableau de bord / Rapports d'activité</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Gestion du site web et oeuvre social</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Gestion des PV du CSE</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="setting">
+                        <legend>Données logiciel </legend>
+                        <div class="fieldset-container set">
+                            <div class="form-checks">
+                                <label for="name">Base de données salariés  /élus du CSE / Entreprises</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Modification des informations</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Notes et tâches</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Voir les tâches concernant les autres</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Configuration générale Espace</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="row">
+                    <fieldset class="setting">
+                        <legend>Trésorier et Adjoint</legend>
+                        <div class="fieldset-container set">
+                            <div class="form-checks">
+                                <label for="name">Gestion des comptes du CSE</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Gestion des oeuvres social</label>
+                                <div class="custom">
+                                    <input type="checkbox" id="name" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="setting">
+                        <legend>Membre CSSCT ou CSE</legend>
+                        <div class="fieldset-container set">
+                            <div class="form-checks">
+                                <label for="name"></label>
+                                <div class="two-checks">
+                                    <div class="custom">
+                                        CSSCT
+                                    </div>
+                                    <div class="custom">
+                                        CSE
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Gestion des enquêtes</label>
+                                <div class="two-checks">
+                                    <div class="custom">
+                                        <input type="checkbox" id="name" class="form-checkbox">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="custom">
+                                        <input type="checkbox" id="name" class="form-checkbox">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Gestion extration enquêtes</label>
+                                <div class="two-checks">
+                                    <div class="custom">
+                                        <input type="checkbox" id="name" class="form-checkbox">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="custom">
+                                        <input type="checkbox" id="name" class="form-checkbox">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Arbres des causes</label>
+                                <div class="two-checks">
+                                    <div class="custom">
+                                        <input type="checkbox" id="name" class="form-checkbox">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="custom">
+                                        <input type="checkbox" id="name" class="form-checkbox">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-checks">
+                                <label for="name">Réalisation enquête</label>
+                                <div class="two-checks">
+                                    <div class="custom">
+                                        <input type="checkbox" id="name" class="form-checkbox">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="custom">
+                                        <input type="checkbox" id="name" class="form-checkbox">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

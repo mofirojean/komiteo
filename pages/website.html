@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Internet</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="../images/logo.png" alt="komiteo-logo">
+            </a>
+            <ul class="nav-items">
+                <li class="nav-item">
+                    <a href="../index.html">Tableau de bord</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./management.html">Gestion des comptes</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="./website.html">Site Internet</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./setting.html">Paramètres</a>
+                </li>
+            </ul>
+            <button class="register-btn">Rechercher</button>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container content">
+        <section class="dashboard">
+            <div class="dash-cards">
+                <!-- cards -->
+                <div class="row end">
+                    <div class="save">
+                        <div class="save-img">
+                            <img src="../images/save.png" alt="save icon">
+                        </div>
+                        <div class="save-text">Enregistrer</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <fieldset>
+                        <legend>Propriétaire du compte (secrétaire)</legend>
+                        <div class="fieldset-container">
+                            <div class="form-field">
+                                <label for="name">Nom Prénom (mail)</label>
+                                <input type="text" id="name" class="form-input">
+                            </div>
+                            <div class="submit-btn">
+                                <span>Transfère </span>
+                                <img class="pencil" src="../images/pencil.png" alt="">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="row">
+                    <fieldset>
+                        <legend>Administrateur et adjoint</legend>
+                        <div class="fieldset-container content">
+                            <div class="submit-btn long">
+                                <span>Administrateur</span>
+                                <img class="pencil" src="../images/pencil.png" alt="">
+                            </div>
+                            <div class="submit-btn long">
+                                <span>Transfère </span>
+                                <img class="pencil" src="../images/pencil.png" alt="">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="side-right small">
+                <div class="img">
+                    <img src="../images/cover.png" alt="cover">
+                    <div class="img-content">
+                        <span>
+                            <span id="date">08:10</span> <br>
+                            Jeudi 28 , <br>
+                            Novembre 2024 <br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
