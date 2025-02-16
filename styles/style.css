@@ -36,7 +36,7 @@ body {
 .navbar {
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 1.5rem;
     background-color: transparent;
@@ -44,8 +44,7 @@ body {
 
 .logo {
     display: block;
-    height: 4rem;
-    padding: 0.2rem;
+    height: 2rem;
     background-color: transparent;
 }
 
@@ -58,18 +57,15 @@ body {
 .nav-items {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-grow: 1;
-    margin: 0 1.3rem;
     background-color: transparent;
 }
 
 .nav-items .nav-item {
     list-style: none;
-    font-size: 1.3rem;
+    font-size: 0.7rem;
     font-weight: 700;
     background-color: transparent;
-    padding: 1.4rem 1.1rem;
+    padding: 0.9rem;
     text-align: center;
     line-height: 0.9;
     transition: all ease-in-out 0.2s;
@@ -92,8 +88,8 @@ body {
 
 .register-btn {
     border: none;
-    padding: 0.6rem 2.5rem;
-    font-size: 1.4rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.6rem;
     border-radius: 10px;
     font-weight: 800;
     background-color: var(--komiteo-gray-thick);
@@ -110,7 +106,6 @@ body {
 main {
     flex-grow: 1;
     margin: 2rem auto;
-    overflow: hidden;
 }
 
 .content .dashboard {
@@ -131,7 +126,9 @@ main {
 .row {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
     align-items: center;
+    padding: 0 1rem;
 }
 
 .row.end {
@@ -180,7 +177,7 @@ main {
 }
 
 .card {
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -194,12 +191,12 @@ main {
 }
 
 .card-img {
-    height: 100px;
-    min-height: 100px;
-    max-height: 100px;
-    width: 100px;
-    min-width: 100px;
-    max-width: 100px;
+    height: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
     border-radius: 999px;
     padding: 0.2rem;
     background-color: #fff;
@@ -212,7 +209,7 @@ main {
 }
 
 .card-text {
-    font-size: 2rem;
+    font-size: 1rem;
     background-color: transparent;
     font-weight: 800;
     color: var(--komiteo-orange);
@@ -261,7 +258,7 @@ main {
     width: 40%;
     background-color: var(--komiteo-gray-light);
     border-radius: 50px;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
@@ -353,7 +350,8 @@ legend {
 .fieldset-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
     padding: 0.4rem;
 }
 
@@ -370,12 +368,12 @@ legend {
 }
 
 .form-field label {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .form-field .form-input {
     padding: 0.8rem;
-    width: 30rem;
+    width: 100%;
     height: 3rem;
     border: none;
     border-radius: 10px;
@@ -395,7 +393,7 @@ legend {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-self: last baseline;
+    align-self: first baseline;
     position: relative;
     cursor: pointer;
     transition: all ease-in-out 0.2s;
@@ -426,7 +424,7 @@ legend {
 
 /* Settings Styles */
 .setting {
-    width: 50%;
+    width: 100%;
     border-color: var(--komiteo-blue);
 }
 
@@ -510,24 +508,228 @@ legend {
 .container {
     width: 100%;
 }
+
 @media (min-width: 640px) {
     .container {
         max-width: 640px;
+    }
+
+    .logo {
+        height: 1rem;
+    }
+
+    .nav-items .nav-item {
+        font-size: 0.5rem;
+    }
+
+    .register-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.5rem;
+    }
+
+    main {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .security {
+        display: none;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 100%;
+    }
+
+    .card-text {
+        font-size: 1.5rem;
+    }
+
+    .side-right {
+        display: none;
     }
 }
 @media (min-width: 768px) {
     .container {
         max-width: 768px;
     }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .logo {
+        height: 2rem;
+    }
+
+    .nav-items {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 1.2rem;
+    }
+
+    .nav-items .nav-item {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+
+    .register-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    main {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .security {
+        display: none;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 100%;
+    }
+
+    .card-text {
+        font-size: 1.5rem;
+    }
+
+    .side-right {
+        display: none;
+    }
+
+    .setting {
+        width: 50%;
+    }
+
+    .card-img {
+        height: 100px;
+        min-height: 100px;
+        max-height: 100px;
+        width: 100px;
+        min-width: 100px;
+        max-width: 100px;
+        border-radius: 999px;
+        padding: 0.2rem;
+        background-color: #fff;
+    }
+
+    .fieldset-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .form-field label {
+        font-size: 1.2rem;
+    }
+
+    .form-field .form-input  {
+        width: 100%;
+    }
+
+    .submit-btn {
+        align-self: last baseline;
+    }
 }
 @media (min-width: 1024px) {
     .container {
         max-width: 1024px;
     }
+
+    .logo {
+        height: 3rem;
+    }
+
+    .nav-items .nav-item {
+        font-size: 1.1rem;
+    }
+
+    main {
+        overflow-y: auto;
+    }
+
+    .security {
+        display: block;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 50%;
+    }
+
+    .card-text {
+        font-size: 1.5rem;
+    }
+
+    .side-right {
+        width: 50%;
+        padding: 1rem;
+    }
+
+    .img-content {
+        font-size: 1.3rem;
+    }
+
+    .side-right {
+        display: flex;
+    }
+
+    p.message {
+        font-size: 1.2rem;
+    }
+
+    .form-field .form-input  {
+        width: 30rem;
+    }
 }
 @media (min-width: 1280px) {
     .container {
         max-width: 1280px;
+    }
+
+    .logo {
+        height: 4rem;
+    }
+
+    .nav-items .nav-item {
+        font-size: 1.3rem;
+    }
+
+    main {
+        overflow-y: hidden;
+    }
+
+    .row {
+        flex-wrap: nowrap;
+    }
+    .card {
+        width: 50%;
+    }
+
+    .card-text {
+        font-size: 1.5rem;
+    }
+
+    .side-right {
+        width: 40%;
+        padding: 2rem;
+    }
+
+    .img-content {
+        font-size: 2rem;
+    }
+
+    p.message {
+        font-size: 2rem;
     }
 }
 @media (min-width: 1536px) {
