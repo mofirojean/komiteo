@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 :root {
     --bachround-color: #fff;
     --komiteo-black: #000;
@@ -19,12 +21,14 @@
     box-sizing: border-box;
 }
 
+
 body {
     background: var(--bachround-color);
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Header styles */
@@ -36,7 +40,7 @@ body {
 .navbar {
     margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
     background-color: transparent;
@@ -44,7 +48,7 @@ body {
 
 .logo {
     display: block;
-    height: 2rem;
+    height: 4rem;
     background-color: transparent;
 }
 
@@ -62,10 +66,10 @@ body {
 
 .nav-items .nav-item {
     list-style: none;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     font-weight: 700;
     background-color: transparent;
-    padding: 0.9rem;
+    padding: 1.5rem 2rem;
     text-align: center;
     line-height: 0.9;
     transition: all ease-in-out 0.2s;
@@ -76,6 +80,7 @@ body {
     text-decoration: none;
     background-color: transparent;
     color: var(--komiteo-orange);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .nav-items .nav-item:hover {
@@ -86,20 +91,28 @@ body {
     background-color: var(--komiteo-orange-light);
 }
 
-.register-btn {
+.search {
+    width: 25%;
     border: none;
-    padding: 0.6rem 1rem;
-    font-size: 0.6rem;
+    padding: 0.8rem 0.6rem;
+    font-size: 1.2rem;
     border-radius: 10px;
     font-weight: 800;
     background-color: var(--komiteo-gray-thick);
-    color: var(--komiteo-gray-light);
-    cursor: pointer;
+    color: var(--komiteo-orange);
     transition: all ease-in 0.2s;
 }
 
-.register-btn:hover {
-    background-color: var(--komiteo-orange);
+.search:focus {
+    background-color: transparent;
+    outline: 2px solid var(--komiteo-orange);
+    border-color: var(--komiteo-orange);
+}
+
+.search::placeholder {
+    font-size: 1.7rem;
+    text-align: center;
+    color: var(--komiteo-gray-light);
 }
 
 /* Main section styles */
@@ -123,12 +136,24 @@ main {
     gap: 1rem;
 }
 
+.content .dashboard.website {
+    gap: 4rem;
+}
+
 .row {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
     align-items: center;
     padding: 0 1rem;
+}
+
+.row.row-lg {
+    margin: 6rem 0;
+    gap: 3rem;
+}
+
+.row.center {
+    justify-content: center;
 }
 
 .row.end {
@@ -177,39 +202,47 @@ main {
 }
 
 .card {
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     gap: 2rem;
     background-color: var(--komiteo-gray-light);
-    padding: 1rem;
+    padding: 1rem 0.7rem;
     border-radius: 1.5rem;
 }
 
+
 .card.main {
-    flex-grow: 1;
+    width: 65%;
 }
 
 .card-img {
-    height: 60px;
-    min-height: 60px;
-    max-height: 60px;
-    width: 60px;
-    min-width: 60px;
-    max-width: 60px;
+    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
     border-radius: 999px;
-    padding: 0.2rem;
-    background-color: #fff;
+    padding: 0.5rem;
+}
+
+.card.main .card-img  {
+    width: 65%;
+    background-color: transparent;
+    padding: 0;
 }
 
 .card-img img {
     height: 100%;
     width: 100%;
     border-radius: 999px;
+    background-color: transparent;
 }
 
 .card-text {
-    font-size: 1rem;
+    font-family: "Architects Daughter", serif;
+    font-size: 3rem;
     background-color: transparent;
     font-weight: 800;
     color: var(--komiteo-orange);
@@ -231,7 +264,7 @@ main {
 }
 
 .card-lg-img {
-    height: 150px;
+    height: 140px;
     background-color: transparent;
     border-radius: 15px;
 }
@@ -243,7 +276,7 @@ main {
 }
 
 .card-lg-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 800;
     text-align: center;
     background-color: transparent;
@@ -255,17 +288,17 @@ main {
 }
 
 .side-right {
-    width: 40%;
+    width: 35%;
     background-color: var(--komiteo-gray-light);
     border-radius: 50px;
-    display: none;
+    display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 0.2rem;
+    padding: 1rem;
 }
 
 .side-right.small {
-    width: 30%;
+    width: 25%;
     padding: 1rem;
 }
 
@@ -276,9 +309,17 @@ main {
     flex-direction: column;
 }
 
+.small .img {
+    height: 220px;
+}
+
 .img img {
     width: 100%;
     background-color: transparent;
+}
+
+.small .img img {
+    height: 100%;
 }
 
 .img-content {
@@ -296,7 +337,7 @@ main {
     align-items: center;
     font-weight: 800;
     color: var(--bachround-color);
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
 }
 
@@ -316,20 +357,21 @@ main {
 .content-option {
     flex-grow: 1;
     background-color: #fff;
-    border-radius: 2rem;
+    border-radius: 5rem;
     border: 5px solid var(--komiteo-orange);
     padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     flex-direction: column;
 }
 
 p.message {
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
+    font-weight: 300;
 }
 
 /* Fieldset and Legend */
@@ -344,13 +386,13 @@ legend {
     padding: 1rem 2rem;
     background-color: var(--komiteo-orange-light);
     border-radius: 10px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 .fieldset-container {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
     gap: 1rem;
     padding: 0.4rem;
 }
@@ -368,12 +410,13 @@ legend {
 }
 
 .form-field label {
-    font-size: 1rem;
+    font-size: 1.4rem;
+    font-weight: 300;
 }
 
 .form-field .form-input {
     padding: 0.8rem;
-    width: 100%;
+    width: 150%;
     height: 3rem;
     border: none;
     border-radius: 10px;
@@ -389,13 +432,14 @@ legend {
 .submit-btn {
     border: 2px dashed var(--komiteo-orange);
     border-radius: 10px;
-    padding: 0.5rem 3rem;
+    padding: 1rem 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    align-self: first baseline;
+    align-self: last baseline;
     position: relative;
     cursor: pointer;
+    font-weight: 300;
     transition: all ease-in-out 0.2s;
     background-color: transparent;
 }
@@ -405,12 +449,12 @@ legend {
 }
 
 .submit-btn span {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     background-color: transparent;
 }
 
 .submit-btn img {
-    height: 15px;
+    height: 35px;
     position: absolute;
     right: 10px;
     background-color: transparent;
@@ -436,7 +480,8 @@ legend {
 }
 
 .form-checks label {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 300;
 }
 
 .custom input {
@@ -452,6 +497,7 @@ legend {
     position: relative;
     display: flex;
     align-items: center;
+    font-weight: 300;
 }
 
 .checkmark {
@@ -493,7 +539,7 @@ legend {
 
 .fieldset-container.set {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .two-checks {
@@ -506,234 +552,5 @@ legend {
 
 /* Container Styles */
 .container {
-    width: 100%;
-}
-
-@media (min-width: 640px) {
-    .container {
-        max-width: 640px;
-    }
-
-    .logo {
-        height: 1rem;
-    }
-
-    .nav-items .nav-item {
-        font-size: 0.5rem;
-    }
-
-    .register-btn {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.5rem;
-    }
-
-    main {
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .security {
-        display: none;
-    }
-
-    .row {
-        flex-wrap: wrap;
-    }
-    .card {
-        width: 100%;
-    }
-
-    .card-text {
-        font-size: 1.5rem;
-    }
-
-    .side-right {
-        display: none;
-    }
-}
-@media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-
-    .navbar {
-        justify-content: space-between;
-    }
-
-    .logo {
-        height: 2rem;
-    }
-
-    .nav-items {
-        flex-grow: 1;
-        display: flex;
-        justify-content: space-between;
-        margin: 0 1.2rem;
-    }
-
-    .nav-items .nav-item {
-        font-size: 1rem;
-        padding: 1.5rem;
-    }
-
-    .register-btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1.2rem;
-    }
-
-    main {
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .security {
-        display: none;
-    }
-
-    .row {
-        flex-wrap: wrap;
-    }
-    .card {
-        width: 100%;
-    }
-
-    .card-text {
-        font-size: 1.5rem;
-    }
-
-    .side-right {
-        display: none;
-    }
-
-    .setting {
-        width: 50%;
-    }
-
-    .card-img {
-        height: 100px;
-        min-height: 100px;
-        max-height: 100px;
-        width: 100px;
-        min-width: 100px;
-        max-width: 100px;
-        border-radius: 999px;
-        padding: 0.2rem;
-        background-color: #fff;
-    }
-
-    .fieldset-container {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .form-field label {
-        font-size: 1.2rem;
-    }
-
-    .form-field .form-input  {
-        width: 100%;
-    }
-
-    .submit-btn {
-        align-self: last baseline;
-    }
-}
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1024px;
-    }
-
-    .logo {
-        height: 3rem;
-    }
-
-    .nav-items .nav-item {
-        font-size: 1.1rem;
-    }
-
-    main {
-        overflow-y: auto;
-    }
-
-    .security {
-        display: block;
-    }
-
-    .row {
-        flex-wrap: wrap;
-    }
-    .card {
-        width: 50%;
-    }
-
-    .card-text {
-        font-size: 1.5rem;
-    }
-
-    .side-right {
-        width: 50%;
-        padding: 1rem;
-    }
-
-    .img-content {
-        font-size: 1.3rem;
-    }
-
-    .side-right {
-        display: flex;
-    }
-
-    p.message {
-        font-size: 1.2rem;
-    }
-
-    .form-field .form-input  {
-        width: 30rem;
-    }
-}
-@media (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-    }
-
-    .logo {
-        height: 4rem;
-    }
-
-    .nav-items .nav-item {
-        font-size: 1.3rem;
-    }
-
-    main {
-        overflow-y: hidden;
-    }
-
-    .row {
-        flex-wrap: nowrap;
-    }
-    .card {
-        width: 50%;
-    }
-
-    .card-text {
-        font-size: 1.5rem;
-    }
-
-    .side-right {
-        width: 40%;
-        padding: 2rem;
-    }
-
-    .img-content {
-        font-size: 2rem;
-    }
-
-    p.message {
-        font-size: 2rem;
-    }
-}
-@media (min-width: 1536px) {
-    .container {
-        max-width: 1536px;
-    }
+    width: 90%;
 }
